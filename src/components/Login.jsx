@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 export const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate();
+    const navigate = useNavigate()
+  
     // Function to handle form submission
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -19,8 +20,7 @@ export const Login = () => {
       // Reset the form
       setUsername('');
       setPassword('');
-      navigate("/Home");
-      // window.location.href = "/Home"
+     navigate('/Home')
     };
   return (
 
