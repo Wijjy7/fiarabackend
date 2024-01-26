@@ -1,0 +1,13 @@
+.fi{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+    
+  }
+  .pa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+  }

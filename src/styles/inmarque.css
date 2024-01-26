@@ -1,0 +1,13 @@
+.fit{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+    
+  }
+  .pat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+  }

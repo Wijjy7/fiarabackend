@@ -1,0 +1,14 @@
+
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    
+  
+    padding: 20px;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+  }
+  
+  /* Additional styling for ProfileHeader or other components can be added here */
+  

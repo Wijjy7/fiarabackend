@@ -1,0 +1,54 @@
+/* Style pour la carte */
+.card {
+    max-width: 300px;
+    margin: auto;
+    margin-top: 100px; /* Ajustez selon vos besoins pour centrer verticalement */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style pour le label */
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Style pour le champ de saisie */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Style pour le bouton */
+  button {
+    background-color: #27374d;;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style pour le bouton au survol */
+  button:hover {
+    background-color: #45a049;
+  }
+  .ie{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+    
+  }
+  .parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+  }
