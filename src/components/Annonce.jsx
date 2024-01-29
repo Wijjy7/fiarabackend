@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Annonce.css'
-// import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { useEffect } from 'react';
