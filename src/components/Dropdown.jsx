@@ -1,4 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
+import { Link, NavLink } from 'react-router-dom';
+
 import '../assets/style.css';
 
 
@@ -50,11 +52,12 @@ const Dropdown = () => {
 };
 function DropdownItem(props){
     return(
-      <a href={props.path}>
-      <li className = 'dropdownItem'>
-        <a> {props.text} </a>
-      </li>
-      </a>
+      <Link to={props.path} className='dropdownItem'>
+        <li className='dropdownItem'>
+          {props.text}
+        </li>
+      </Link>
     );
+   
   }
 export default Dropdown;

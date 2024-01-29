@@ -22,14 +22,15 @@ import Home from './components/Home';
 import Login from './components/Login';
 import CarteVoiture from './components/CarteVoiture';
 
+
 const App = () => {
 
   const location = useLocation();
 
-  const loginPage = window.location.pathname === '/';
+
   return (
     <>
-      {location.pathname == '/' ? 
+      {location.pathname == '/' ?
         <></> :
         <>
           <Sildebar />
@@ -37,14 +38,15 @@ const App = () => {
         </>
       }
       <Routes>
+
         <Route path="/" element={<Login />}></Route>
-        <Route path="/Vente" element={<Vente />}></Route>
+        <Route path="/vente" element={<Vente />}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Annonce" element={<Annonce />}></Route>
         <Route path="/categorie" element={<Incategorie />}></Route>
         <Route path="/couleur" element={<InCouleur />}></Route>
-        <Route path="/transmition" element={<Intranmision />}></Route>  
-        <Route path="/marque"  element={<Inmarque />}></Route>
+        <Route path="/transmition" element={<Intranmision />}></Route>
+        <Route path="/marque" element={<Inmarque />}></Route>
         <Route path="/modele" element={<Inmodele />}></Route>
         <Route path="/equipement" element={<InEquipement />}></Route>
         <Route path="/pays" element={<Incategorie />}></Route>
