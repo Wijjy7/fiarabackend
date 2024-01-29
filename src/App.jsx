@@ -38,12 +38,12 @@ const App = () => {
       }
       <Routes>
         <Route path="/" element={<Login />}></Route>
-        <Route path="https://profound-cucurucho-3462bb.netlify.app/Vente" element={<Vente />}></Route>
+        <Route path="/Vente" element={<Vente />}></Route>
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Annonce" element={<Annonce />}></Route>
         <Route path="/categorie" element={<Incategorie />}></Route>
         <Route path="/couleur" element={<InCouleur />}></Route>
-        <Route path="/transmition" element={<Intranmision />}></Route>
+        <Route path="/transmition" element={<Intranmision />}></Route>  
         <Route path="/marque"  element={<Inmarque />}></Route>
         <Route path="/modele" element={<Inmodele />}></Route>
         <Route path="/equipement" element={<InEquipement />}></Route>
