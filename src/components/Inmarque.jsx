@@ -1,57 +1,85 @@
 import React,{useState} from 'react'
 import '../styles/inmarque.css'
-const Inmarque = () => {
-    const [nouveauMarque, setNomnouveauMarque] = useState('');
-    const [imagePath, setImagePath] = useState('');
-    const [selectedOption, setSelectedOption] = useState('');
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+function Inmarque() {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    nom: '',
+  });
+  const [error, setError] = useState(null);
 
-    const handleImageChange = (event) => {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          setImagePath(reader.result);
-        };
-        reader.readAsDataURL(file);
-        setImageName(file.name);
+  const handleInput = (e) => {
+    handleChange(e, formData, setFormData);
+    console.log(formData.values);
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(false);
+    const url = 'https://voiture-production-247e.up.railway.app/api/marques/insert';
+    const token =localStorage.getItem('token');
+    try {
+      const data = new FormData();
+      data.append('nom', formData.nom);
+      let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: url,
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'authorization': token
+        },
+        data: data
       }
-    };
+      const response = await axios.request(config);
 
-    const handleInsertion = () => {
-        // Effectuer l'insertion ici, par exemple, en appelant une API
-        console.log(`Insertion du nouveau Modele : ${nouveauModele}`);
-      
-        setNouveauModele('');
-      };
+      if (response.data.error) {
+        // Check if there's an error in the response
+        console.error('Erreur lors de la requête:', response.data.error);
+        setError(response.data.error);
+        setLoading(false);
+      } else {
+        console.log('Insert successful:', response.data);
+        navigate("/Home")
+        setFormData({
+          nom: '',
+        });
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi des données à railway:', error);
+    }
+  }
 
-      const handleSelectChange = (event) => {
-        setSelectedOption(event.target.value);
-      };
 
   return (
-    <div className='pa'>
-   <div className='fi'>
-      
-        <label>Pays</label>
-       <select value={selectedOption} onChange={handleSelectChange}>
-        <option value="" disabled>Sélectionnez un pays</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
-      <label>Nom:</label>
-            <input
-              type="text"
-              value={nouveauMarque}
-              onChange={(e) => setNomnouveauMarque(e.target.value)}
-              placeholder="Nom du marque"
+    <div className='pat'>
+      <div className='fit'>
+        <form onSubmit={handleSubmit} method='post'>
+          <label>Nouveau marque :</label>
+          <input
+            onChange={handleChange}
+            name="nom"
+            type="text"
+            className="form__field"
+            placeholder="Marque"
+            required=""
+            value={formData.nom}
           />
-
-          <input type="file" accept="image/*" onChange={handleImageChange} />
-
-            <button onClick={handleInsertion}>OK</button>
-            </div>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          <button className="submit button" type='submit'>Enregistrer</button>
+        </form>
+      </div>
     </div>
+
   )
 }
 

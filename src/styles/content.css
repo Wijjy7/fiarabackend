@@ -1,3 +1,20 @@
+.dashboard{
+    display: flex;
+    gap: 20px;
+    justify-content: center
+}
+
+
+.dashboard--content{
+    background-color: #fff;
+    flex: 1;
+    border-radius:20px ;
+    padding: 2rem;
+    display: flex;
+    gap:1.5rem;
+    justify-content: space-between;
+}
+
 .content {
     width:75%;
     height: auto;

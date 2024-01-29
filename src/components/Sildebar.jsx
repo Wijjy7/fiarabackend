@@ -7,6 +7,7 @@ import Annonce from './Annonce';
 import Incategorie from './Incategorie';
 const Sildebar = () => {
   return (
+
     <div className="menu" >
         <div className="logo" >
             <BiBookAlt className='logo-icon' />
@@ -46,6 +47,7 @@ const Sildebar = () => {
            
         </div>
     </div>
+    
   )
 }
 

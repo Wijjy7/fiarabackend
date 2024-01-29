@@ -33,11 +33,11 @@ const Dropdown = () => {
         <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
           <ul>
             <DropdownItem  path={"/categorie"} text = {"Categorie "}/>
-            <DropdownItem path={"/type"} text = {"Type"}/>
+            <DropdownItem path={"/couleur"} text = {"Couleur"}/>
             <DropdownItem path={"/transmition"} text = {"Transmition"}/>
             <DropdownItem path={"/marque"} text = {"Marque"}/>
             <DropdownItem path={"/modele"} text = {"Modele"}/>
-            <DropdownItem path={"/marquecat"} text = {"Categorie de la marque"}/>
+            <DropdownItem path={"/equipement"} text = {"Equipement"}/>
             <DropdownItem path={"/pays"} text = {"Pays"}/>
             <DropdownItem path={"/energie"} text = {"N Energie"}/>
             <DropdownItem path={"/etatvehicule"} text = {"Nouveau Etat de Vehivule "}/>

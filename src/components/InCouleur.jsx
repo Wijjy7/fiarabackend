@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import '../styles/incategorie.css';
+import React,{useState} from 'react'
+import '../styles/inmarque.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-function InTransmission() {
+function InCouleur() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     nom: '',
@@ -25,7 +25,7 @@ function InTransmission() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
-    const url = 'https://voiture-production-247e.up.railway.app/api/transmission/insert';
+    const url = 'https://voiture-production-247e.up.railway.app/api/couleurs/insert';
     const token =localStorage.getItem('token');
     try {
       const data = new FormData();
@@ -64,13 +64,13 @@ function InTransmission() {
     <div className='pat'>
       <div className='fit'>
         <form onSubmit={handleSubmit} method='post'>
-          <label>Nouveau transmission :</label>
+          <label>Nouveau couleur :</label>
           <input
             onChange={handleChange}
             name="nom"
             type="text"
             className="form__field"
-            placeholder="Transmission"
+            placeholder="Couleur"
             required=""
             value={formData.nom}
           />
@@ -83,4 +83,4 @@ function InTransmission() {
   )
 }
 
-export default InTransmission
+export default InCouleur;

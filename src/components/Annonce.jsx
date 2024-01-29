@@ -18,7 +18,8 @@ const Annonce = () => {
       };
    
   return (
-    <div>  
+    <div className='dashboard--content' >  
+
         <div>Annonce</div>
         
             <div>

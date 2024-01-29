@@ -9,12 +9,13 @@ import Vente from './components/Vente';
 import './App.css';
 import Annonce from './components/Annonce';
 import Incategorie from './components/Incategorie';
-import Itype from './components/Itype';
+import InCouleur from './components/InCouleur';
+import Inmarque from './components/Inmarque';
 import Inmodele from './components/Inmodele';
-import Icatmarque from './components/Icatmarque';
+import InEquipement from './components/InEquipement';
 import Ienrgie from './components/Ienrgie';
 import Inev from './components/Inev';
-import { Intranmision } from './components/Intranmision';
+import Intranmision from './components/Intranmision';
 import Statistique from './components/Home';
 import Parametrage from './components/Parametrage';
 import Home from './components/Home';
@@ -41,11 +42,12 @@ const App = () => {
         <Route path="/Home" element={<Home />}></Route>
         <Route path="/Annonce" element={<Annonce />}></Route>
         <Route path="/categorie" element={<Incategorie />}></Route>
-        <Route path="/type" element={<Itype />}></Route>
+        <Route path="/couleur" element={<InCouleur />}></Route>
         <Route path="/transmition" element={<Intranmision />}></Route>
         {/* <Route path="/carte" element={<CarteVoiture />}></Route> */}
+        <Route path="/marque"  element={<Inmarque />}></Route>
         <Route path="/modele" element={<Inmodele />}></Route>
-        <Route path="/marquecat" element={<Icatmarque />}></Route>
+        <Route path="/equipement" element={<InEquipement />}></Route>
         <Route path="/pays" element={<Incategorie />}></Route>
         <Route path="/Energie" element={<Ienrgie />}></Route>
         <Route path="/etatvehicule" element={<Inev />}></Route>

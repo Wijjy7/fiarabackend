@@ -1,19 +1,47 @@
-.log{
-    /* display: flex; */
-  
-}
-.log2{
-    margin: 15%;
+/* LoginForm.css */
+
+.container {
+    margin-top: 165px;
+    max-width: 400px;
+    margin: auto;
     padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color:#fff ;
-    border-radius: 20px;
-    
-}
-.log2element.style {
-    margin-top: 50px;
-}  
-.log input{
-    margin: 10px;
-    width: 60%;
-} 
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

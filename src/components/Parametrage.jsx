@@ -26,7 +26,7 @@ const Parametrage = () => {
 
     
   return (
-    <div>
+    <div className='dashboard--content'>
         <div>
         <label>Parametrage de  la consomation:</label>
             <input

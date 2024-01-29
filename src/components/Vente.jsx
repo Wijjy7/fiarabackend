@@ -9,9 +9,8 @@ const Vente = () => {
     ]);
    
   return (
-    <div>  
-        <div>Vente</div>
-        
+    <div className='dashboard--content'>  
+   
             <div>
                         <table>
                             <thead>
