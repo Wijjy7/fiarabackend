@@ -70,7 +70,7 @@ function Login() {
           name="email"
           value={formData.email}
           className='input'
-          placeholder="admin"
+          placeholder="rabezatovosafidy@gmail.com"
           onChange={handleChange}
           required
         />
@@ -81,7 +81,7 @@ function Login() {
           name="password"
           value={formData.password}
           className='input'
-          placeholder="admin"
+          placeholder="safidy1802"
           onChange={handleChange}
           required
         />
